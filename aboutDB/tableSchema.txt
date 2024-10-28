@@ -1,0 +1,45 @@
+-- myjdbc.branchesinfo definition
+
+-- to keep the branchesinfo and id
+CREATE TABLE `branchesinfo` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `address` varchar(100) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) 
+
+
+
+
+
+
+-- myjdbc.library definition
+-- to keep the lastest library info 
+CREATE TABLE `library` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `areaId` int NOT NULL,
+  `branchName` varchar(100) NOT NULL,
+  `floorName` varchar(50) NOT NULL,
+  `areaName` varchar(100) NOT NULL,
+  `freeCount` int NOT NULL,
+  `totalCount` int NOT NULL,
+  `createTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+)
+
+
+
+-- myjdbc.library_his definition
+-- to keep old library info 
+CREATE TABLE `library_his` (
+  `areaId` int NOT NULL,
+  `branchName` varchar(100) NOT NULL,
+  `floorName` varchar(50) NOT NULL,
+  `areaName` varchar(100) NOT NULL,
+  `freeCount` int NOT NULL,
+  `totalCount` int NOT NULL,
+  `createTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+)
+
+

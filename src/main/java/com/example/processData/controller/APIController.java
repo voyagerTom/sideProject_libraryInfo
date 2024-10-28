@@ -30,7 +30,11 @@ public class APIController {
     LibraryDaoImpl libraryDao;
 
 
-    //ok
+    /**
+     * 取得指定分館的各區使用狀況
+     * @param id
+     * @return
+     */
     @GetMapping("/getlibrarydetail/{id}")
     public ResponseEntity<List<LibraryDetail>> getLibraryDetail(@PathVariable("id") int id) {
         System.out.println("傳送圖書館資訊給前端開始  /getlibrarydetail");
@@ -40,6 +44,10 @@ public class APIController {
     }
 
 
+    /**
+     * 抓各分館使用率
+     * @return
+     */
     //ok
     @GetMapping("/getlibrarylist")
     public ResponseEntity<List<LibraryList>> getLibraryList() {
@@ -59,7 +67,7 @@ public class APIController {
 
 
     /**
-     * 抓圖書館資料API
+     * 抓最新圖書館資料API
      *
      * @return
      * @throws IOException
@@ -87,6 +95,11 @@ public class APIController {
     }
 
 
+    /**
+     * 取得各分館資訊(地址/電話等等)
+     * @param id
+     * @return
+     */
     @GetMapping("/getbranchbasicinfo/{id}")
     public ResponseEntity< List<BranchInfo>> getBranchBasicInfo(@PathVariable("id") int id){
         System.out.println("----取得基本資料開始----");
