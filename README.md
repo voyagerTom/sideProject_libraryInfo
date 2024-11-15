@@ -6,8 +6,11 @@
 
 【API 說明】
 >> GET /getopensource : 抓取json資料，並轉換存到DB，舊資料會被移動到歷史區
+>> 
 >> GET /getbranchbasicinfo/{id} : 依照ID 取得各分館資訊(地址/電話等等)
+>> 
 >> GET /getlibrarylist : 抓各分館使用率
+>> 
 >> GET /getlibrarydetail/{id} : 取得指定分館的各區使用狀況
 
 <分館ID對照表>
